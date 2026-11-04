@@ -1,131 +1,276 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Wheels on Fire</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheels on Fire | Luxury Car Collection</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>WHEELS ON FIRE</h1>
+    <!-- NAVIGATION BAR -->
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
+    <header>
+        <h1>WHEELS ON FIRE</h1>
+
+        <nav>
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#categories">Categories</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
 
 
-<section class="hero">
+    <main>
 
-    <div class="hero-text">
-        <p class="small-title">WELCOME TO</p>
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <p class="small-title">WELCOME TO</p>
+
+                <h2>WHEELS ON FIRE</h2>
+
+                <p>
+                    Discover an exclusive collection of
+                    extraordinary cars, from timeless classics
+                    to the world's most powerful supercars.
+                </p>
+
+                <a href="#collection" class="button">
+                    EXPLORE COLLECTION
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURED CAR COLLECTION -->
+
+        <section id="collection" class="collection">
+
+            <p class="small-title">OUR EXCLUSIVE COLLECTION</p>
+
+            <h2>FEATURED CARS</h2>
+
+            <p class="section-description">
+                Explore our selection of luxury,
+                performance and exotic vehicles.
+            </p>
+
+            <div class="cars">
+
+                <!-- FERRARI -->
+
+                <article class="car">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=900"
+                        alt="Red Ferrari sports car"
+                        loading="lazy">
+
+                    <div class="car-details">
+
+                        <p class="car-type">SUPERCAR</p>
+
+                        <h3>Ferrari SF90</h3>
+
+                        <p>
+                            Experience Italian engineering,
+                            outstanding performance and
+                            breathtaking design.
+                        </p>
+
+                        <a href="https://www.ferrari.com/en-EN/auto/sf90-stradale"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            DISCOVER MORE
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LAMBORGHINI -->
+
+                <article class="car">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900"
+                        alt="Lamborghini supercar"
+                        loading="lazy">
+
+                    <div class="car-details">
+
+                        <p class="car-type">SUPERCAR</p>
+
+                        <h3>Lamborghini Revuelto</h3>
+
+                        <p>
+                            A remarkable V12 hybrid supercar
+                            combining futuristic styling
+                            with incredible power.
+                        </p>
+
+                        <a href="https://www.lamborghini.com/en-en/models/revuelto"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            DISCOVER MORE
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ROLLS ROYCE -->
+
+                <article class="car">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=900"
+                        alt="Luxury Rolls-Royce vehicle"
+                        loading="lazy">
+
+                    <div class="car-details">
+
+                        <p class="car-type">LUXURY SUV</p>
+
+                        <h3>Rolls-Royce Cullinan</h3>
+
+                        <p>
+                            Discover exceptional craftsmanship,
+                            ultimate comfort and
+                            sophisticated luxury.
+                        </p>
+
+                        <a href="https://www.rolls-roycemotorcars.com/en_GB/showroom/cullinan.html"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            DISCOVER MORE
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAR CATEGORIES -->
+
+        <section id="categories" class="categories">
+
+            <p class="small-title">FIND YOUR DREAM CAR</p>
+
+            <h2>EXPLORE BY TYPE</h2>
+
+            <p class="section-description">
+                Discover different categories of
+                extraordinary vehicles.
+            </p>
+
+            <div class="category-list">
+
+                <a href="https://www.ferrari.com/en-EN/auto"
+                   class="category"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <h3>SUPERCARS</h3>
+                    <p>Performance and speed</p>
+
+                </a>
+
+                <a href="https://www.bugatti.com/"
+                   class="category"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <h3>HYPERCARS</h3>
+                    <p>Extraordinary engineering</p>
+
+                </a>
+
+                <a href="https://www.rolls-roycemotorcars.com/"
+                   class="category"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <h3>LUXURY CARS</h3>
+                    <p>Elegance and comfort</p>
+
+                </a>
+
+                <a href="https://www.classicdriver.com/en/cars"
+                   class="category"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <h3>CLASSIC CARS</h3>
+                    <p>Timeless automotive icons</p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT PREVIEW -->
+
+        <section class="about-preview">
+
+            <p class="small-title">OUR PASSION</p>
+
+            <h2>MORE THAN JUST CARS</h2>
+
+            <p>
+                Founded by John O'Reilly, Wheels on Fire
+                brings together a passion for exceptional
+                automobiles and beautiful design.
+                Explore our collection and discover
+                the car that suits your dreams.
+            </p>
+
+            <a href="about.html" class="button">
+                ABOUT US
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
 
         <h2>WHEELS ON FIRE</h2>
 
-        <p>
-            Discover a collection of extraordinary cars,
-            from timeless classics to modern supercars.
+        <p>Driven by passion. Defined by excellence.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="#collection">Collection</a>
+            <a href="#categories">Categories</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 Wheels on Fire - John O'Reilly
         </p>
 
-        <a class="button" href="#collection">
-            EXPLORE COLLECTION
-        </a>
-    </div>
-
-</section>
-
-
-<section id="collection" class="collection">
-
-    <p class="small-title">OUR COLLECTION</p>
-
-    <h2>FEATURED CARS</h2>
-
-    <div class="cars">
-
-        <div class="car">
-            <div class="car-image ferrari"></div>
-
-            <h3>Ferrari SF90</h3>
-
-            <p>
-                Italian performance and luxury.
-            </p>
-
-            <a href="#">VIEW CAR</a>
-        </div>
-
-
-        <div class="car">
-            <div class="car-image lamborghini"></div>
-
-            <h3>Lamborghini Revuelto</h3>
-
-            <p>
-                A powerful modern V12 supercar.
-            </p>
-
-            <a href="#">VIEW CAR</a>
-        </div>
-
-
-        <div class="car">
-            <div class="car-image rolls"></div>
-
-            <h3>Rolls-Royce Cullinan</h3>
-
-            <p>
-                Luxury, comfort and prestige.
-            </p>
-
-            <a href="#">VIEW CAR</a>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="categories">
-
-    <p class="small-title">DISCOVER</p>
-
-    <h2>EXPLORE BY TYPE</h2>
-
-    <div class="category-list">
-
-        <div>
-            <h3>SUPERCARS</h3>
-        </div>
-
-        <div>
-            <h3>HYPERCARS</h3>
-        </div>
-
-        <div>
-            <h3>LUXURY CARS</h3>
-        </div>
-
-        <div>
-            <h3>CLASSIC CARS</h3>
-        </div>
-
-    </div>
-
-</section>
-
-
-<footer>
-
-    <h2>WHEELS ON FIRE</h2>
-
-    <p>
-        © 2026 Wheels on Fire - John O'Reilly
-    </p>
-
-</footer>
+    </footer>
 
 </body>
 </html>
