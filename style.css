@@ -1,92 +1,166 @@
+
+/* ========================================
+   WHEELS ON FIRE - MAIN STYLESHEET
+   ======================================== */
+
+
+/* 1. GENERAL STYLING */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #0b0b0b;
     color: white;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+:focus-visible {
+    outline: 2px solid #c9a45c;
+    outline-offset: 4px;
 }
 
 
-/* NAVIGATION */
+/* ========================================
+   2. NAVIGATION BAR - BOTH PAGES
+   ======================================== */
 
 header {
-    height: 80px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 7%;
+    gap: 25px;
+    padding: 20px 7%;
     background-color: #080808;
     border-bottom: 1px solid #333;
 }
 
 header h1 {
     font-size: 22px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.logo h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c9a45c;
+}
+
+.logo p {
+    color: #c9a45c;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
-    margin-left: 30px;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 2px;
+    transition: color 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a[aria-current="page"] {
     color: #c9a45c;
 }
 
+.enquire-button {
+    display: inline-block;
+    background-color: #c9a45c;
+    color: black;
+    padding: 14px 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
 
-/* HERO */
+.enquire-button:hover {
+    background-color: white;
+}
+
+
+/* ========================================
+   3. HOME PAGE - HERO SECTION
+   ======================================== */
 
 .hero {
-    height: 650px;
+    min-height: 650px;
 
     background-image:
         linear-gradient(
-            rgba(0,0,0,0.35),
-            rgba(0,0,0,0.75)
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.8)
         ),
-        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1800");
 
     background-size: cover;
     background-position: center;
 
     display: flex;
     align-items: center;
-    padding-left: 8%;
+    padding: 100px 8%;
 }
 
 .hero-text {
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .small-title {
     color: #c9a45c;
     letter-spacing: 4px;
     font-size: 13px;
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
 .hero h2 {
     font-size: 65px;
     letter-spacing: 5px;
-    margin-bottom: 20px;
+    line-height: 1.2;
+    margin-bottom: 25px;
 }
 
-.hero p {
+.hero-text > p:not(.small-title) {
     font-size: 18px;
-    line-height: 1.7;
-    color: #dddddd;
+    color: #ddd;
+    line-height: 1.8;
 }
 
 
-/* BUTTON */
+/* ========================================
+   4. BUTTONS - BOTH PAGES
+   ======================================== */
 
 .button {
     display: inline-block;
@@ -94,31 +168,49 @@ nav a:hover {
     padding: 15px 30px;
 
     background-color: #c9a45c;
-    color: black;
+    color: #080808;
 
-    text-decoration: none;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
+
+    transition: background-color 0.3s,
+                transform 0.3s;
 }
 
 .button:hover {
     background-color: white;
+    transform: translateY(-3px);
 }
 
 
-/* COLLECTION */
+/* ========================================
+   5. HOME PAGE - SECTION HEADINGS
+   ======================================== */
+
+.collection h2,
+.categories h2,
+.about-preview h2 {
+    font-size: 42px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    color: #aaa;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+
+/* ========================================
+   6. HOME PAGE - FEATURED CARS
+   ======================================== */
 
 .collection {
     padding: 100px 8%;
     text-align: center;
-}
-
-.collection h2,
-.categories h2 {
-    font-size: 42px;
-    letter-spacing: 4px;
-    margin-bottom: 60px;
 }
 
 .cars {
@@ -128,50 +220,75 @@ nav a:hover {
 }
 
 .car {
-    background-color: #151515;
-    width: 32%;
-    padding-bottom: 30px;
+    background-color: #171717;
+    flex: 1;
+    min-width: 0;
     text-align: left;
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    transition: transform 0.3s,
+                border-color 0.3s;
 }
 
-.car-image {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
+.car:hover {
+    transform: translateY(-8px);
+    border-color: #c9a45c;
 }
 
-.ferrari {
-    background-image: url("https://images.unsplash.com/photo-1592198084033-aade902d1aae");
+.car img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.4s;
 }
 
-.lamborghini {
-    background-image: url("https://images.unsplash.com/photo-1544636331-e26879cd4d9b");
+.car:hover img {
+    transform: scale(1.04);
 }
 
-.rolls {
-    background-image: url("https://images.unsplash.com/photo-1631295868223-63265b40d9e4");
+.car-details {
+    padding: 25px;
+}
+
+.car-type {
+    color: #c9a45c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
 .car h3 {
-    font-size: 20px;
-    margin: 25px 20px 10px;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
-.car p {
+.car-details > p:not(.car-type) {
     color: #aaa;
-    margin: 0 20px 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
 }
 
 .car a {
     color: #c9a45c;
-    margin-left: 20px;
-    text-decoration: none;
     font-size: 12px;
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
+.car a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
-/* CATEGORIES */
+
+/* ========================================
+   7. HOME PAGE - CAR CATEGORIES
+   ======================================== */
 
 .categories {
     padding: 100px 8%;
@@ -185,40 +302,671 @@ nav a:hover {
     gap: 20px;
 }
 
-.category-list div {
-    height: 180px;
+.category {
+    min-height: 200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    padding: 30px;
     border: 1px solid #333;
+    background-color: #191919;
+    color: white;
 
-    background-color: #171717;
+    transition: background-color 0.3s,
+                border-color 0.3s;
 }
 
-.category-list h3 {
+.category h3 {
+    font-size: 22px;
     letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
-.category-list div:hover {
+.category p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.category:hover {
     background-color: #c9a45c;
+    border-color: #c9a45c;
     color: black;
 }
 
+.category:hover p {
+    color: #222;
+}
 
-/* FOOTER */
 
-footer {
+/* ========================================
+   8. HOME PAGE - ABOUT PREVIEW
+   ======================================== */
+
+.about-preview {
+    padding: 120px 8%;
     text-align: center;
-    padding: 60px;
+    background-color: #0b0b0b;
+}
+
+.about-preview > p:not(.small-title) {
+    color: #bbb;
+    font-size: 17px;
+    max-width: 750px;
+    margin: 20px auto;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   9. ABOUT PAGE - HERO SECTION
+   ======================================== */
+
+.about-hero {
+    min-height: 540px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1800");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+}
+
+.about-hero-content {
+    max-width: 750px;
+}
+
+.gold-label {
+    display: inline-block;
+    color: #c9a45c;
+    border: 1px solid #756032;
+
+    padding: 8px 15px;
+    margin-bottom: 30px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.about-hero h2 {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 550px;
+}
+
+
+/* ========================================
+   10. ABOUT PAGE - COMPANY HISTORY
+   ======================================== */
+
+.company-history {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    padding: 110px 10%;
     background-color: #050505;
 }
 
+.history-text,
+.history-image {
+    width: 50%;
+}
+
+.history-text h2 {
+    font-family: Georgia, serif;
+    font-size: 39px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.history-text > p:not(.gold-label) {
+    color: #999;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.history-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ========================================
+   11. ABOUT PAGE - COMPANY GROWTH
+   ======================================== */
+
+.company-growth {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    padding: 110px 10%;
+    background-color: #0b0b0b;
+}
+
+.growth-image,
+.growth-text {
+    width: 50%;
+}
+
+.growth-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.growth-text h2 {
+    font-family: Georgia, serif;
+    font-size: 39px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.growth-text > p:not(.gold-label) {
+    color: #999;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   12. ABOUT PAGE - FOUNDER
+   ======================================== */
+
+.founder-section {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    padding: 110px 10%;
+    background-color: #050505;
+}
+
+.founder-text {
+    width: 55%;
+}
+
+.founder-image {
+    width: 45%;
+}
+
+.founder-text h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.founder-text > p:not(.gold-label) {
+    color: #999;
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.founder-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ========================================
+   13. ABOUT PAGE - COMPANY VISION
+   ======================================== */
+
+.company-vision {
+    padding: 110px 20%;
+    text-align: center;
+    background-color: #0b0b0b;
+}
+
+.company-vision h2 {
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.company-vision > p:not(.gold-label) {
+    color: #999;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   14. HOME PAGE - FOOTER
+   ======================================== */
+
+footer {
+    text-align: center;
+    padding: 65px 8%;
+    background-color: #050505;
+    border-top: 1px solid #222;
+}
+
 footer h2 {
+    font-size: 22px;
     letter-spacing: 4px;
     margin-bottom: 15px;
 }
 
 footer p {
-    color: #777;
+    color: #999;
+    font-size: 14px;
 }
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #c9a45c;
+}
+
+.copyright {
+    padding-top: 25px;
+    border-top: 1px solid #222;
+}
+
+
+/* ========================================
+   15. ABOUT PAGE - LUXURY FOOTER
+   ======================================== */
+
+.luxury-footer {
+    background-color: #050505;
+    border-top: 1px solid #252525;
+    padding: 80px 8% 25px;
+    text-align: left;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-column h3 span {
+    color: #c9a45c;
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 12px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.footer-subtitle {
+    color: #c9a45c !important;
+    font-size: 9px !important;
+    letter-spacing: 1px;
+}
+
+.footer-column p {
+    color: #888;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.footer-column a:not(.contact-button) {
+    display: block;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.footer-column a:hover {
+    color: #c9a45c;
+}
+
+.contact-button {
+    display: inline-block;
+    border: 1px solid #c9a45c;
+    color: #c9a45c;
+
+    padding: 12px 22px;
+    margin-top: 15px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.contact-button:hover {
+    background-color: #c9a45c;
+    color: black;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 70px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   16. TABLET RESPONSIVE DESIGN
+   ======================================== */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .cars {
+        flex-wrap: wrap;
+    }
+
+    .car {
+        flex: 0 1 calc(50% - 15px);
+    }
+
+    .collection h2,
+    .categories h2,
+    .about-preview h2 {
+        font-size: 34px;
+    }
+
+    .about-hero h2 {
+        font-size: 45px;
+    }
+
+    .company-history,
+    .company-growth,
+    .founder-section {
+        gap: 30px;
+        padding: 70px 6%;
+    }
+
+    .history-text h2,
+    .growth-text h2 {
+        font-size: 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* ========================================
+   17. MOBILE RESPONSIVE DESIGN
+   ======================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* NAVIGATION */
+
+    header {
+        padding: 25px 5%;
+    }
+
+    header h1 {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .enquire-button {
+        font-size: 11px;
+        padding: 12px 20px;
+    }
+
+
+    /* HOME HERO */
+
+    .hero {
+        min-height: 500px;
+        padding: 70px 6%;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .hero-text > p:not(.small-title) {
+        font-size: 15px;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+
+    /* HOME COLLECTION */
+
+    .collection,
+    .categories {
+        padding: 70px 6%;
+    }
+
+    .collection h2,
+    .categories h2,
+    .about-preview h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .cars {
+        flex-direction: column;
+    }
+
+    .car {
+        width: 100%;
+        flex: auto;
+    }
+
+    .car img {
+        height: 230px;
+    }
+
+
+    /* HOME CATEGORIES */
+
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+
+    .category {
+        min-height: 150px;
+    }
+
+    .category h3 {
+        font-size: 19px;
+    }
+
+
+    /* HOME ABOUT PREVIEW */
+
+    .about-preview {
+        padding: 80px 6%;
+    }
+
+
+    /* ABOUT HERO */
+
+    .about-hero {
+        min-height: 480px;
+        padding: 70px 6%;
+    }
+
+    .about-hero h2 {
+        font-size: 35px;
+    }
+
+
+    /* ABOUT HISTORY, GROWTH, FOUNDER */
+
+    .company-history,
+    .company-growth,
+    .founder-section {
+        flex-direction: column;
+        padding: 70px 6%;
+    }
+
+    .history-text,
+    .history-image,
+    .growth-text,
+    .growth-image,
+    .founder-text,
+    .founder-image {
+        width: 100%;
+    }
+
+    .history-image img,
+    .growth-image img {
+        height: 300px;
+    }
+
+    .company-growth .growth-image {
+        order: 2;
+    }
+
+    .company-growth .growth-text {
+        order: 1;
+    }
+
+    .history-text h2,
+    .growth-text h2,
+    .founder-text h2 {
+        font-size: 30px;
+    }
+
+
+    /* ABOUT VISION */
+
+    .company-vision {
+        padding: 70px 6%;
+    }
+
+    .company-vision h2 {
+        font-size: 32px;
+    }
+
+
+    /* HOME FOOTER */
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    footer {
+        padding: 50px 6%;
+    }
+
+
+    /* ABOUT FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .luxury-footer {
+        padding: 60px 6% 25px;
+    }
+
+}
+
+
+/* ========================================
+   18. ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .button,
+    .car,
+    .car img,
+    .category,
+    nav a,
+    .enquire-button {
+        transition: none;
+    }
+
+}
+
+ 
