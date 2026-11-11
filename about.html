@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
@@ -13,21 +15,56 @@
 
 <body>
 
+    <!-- ACCESSIBILITY: SKIP NAVIGATION -->
+
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+
     <!-- NAVIGATION BAR -->
 
     <header>
 
         <div class="logo">
-            <h1>WHEELS ON <span>FIRE</span></h1>
-            <p>AN EXCLUSIVE AUTOMOTIVE COLLECTION</p>
+
+            <p class="site-logo">
+                WHEELS ON <span>FIRE</span>
+            </p>
+
+            <p>
+                AN EXCLUSIVE AUTOMOTIVE COLLECTION
+            </p>
+
         </div>
 
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="index.html#collection">COLLECTION</a>
-            <a href="about.html" aria-current="page">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+
+        <!-- ACCESSIBILITY: CONSISTENT NAVIGATION -->
+
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#collection">
+                Collection
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="about.html" aria-current="page">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </nav>
+
 
         <a href="#contact" class="enquire-button">
             ENQUIRE NOW
@@ -36,7 +73,7 @@
     </header>
 
 
-    <main>
+    <main id="main-content">
 
         <!-- ABOUT HERO SECTION -->
 
@@ -46,10 +83,12 @@
 
                 <p class="gold-label">ABOUT US</p>
 
-                <h2>
+                <!-- ACCESSIBILITY: MAIN HEADING -->
+
+                <h1>
                     A Passion for<br>
                     Exceptional Automobiles
-                </h2>
+                </h1>
 
                 <p class="hero-description">
                     Founded in Dublin, Ireland, Wheels on Fire
@@ -77,6 +116,8 @@
                     Built on Passion,<br>
                     Driven by Excellence
                 </h2>
+
+                <!-- ACCESSIBILITY: SHORT PARAGRAPHS -->
 
                 <p>
                     Wheels on Fire was founded in Dublin
@@ -113,6 +154,8 @@
 
 
             <div class="history-image">
+
+                <!-- ACCESSIBILITY: IMAGE ALT TEXT -->
 
                 <img
                     src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1000"
@@ -219,9 +262,10 @@
 
             <div class="founder-image">
 
-                <img src="john-oreilly.png"
-                     alt="Portrait used for the Wheels on Fire founder profile"
-                     loading="lazy">
+                <img
+                    src="john-oreilly.png"
+                    alt="Portrait used for the Wheels on Fire founder profile"
+                    loading="lazy">
 
             </div>
 
@@ -232,7 +276,9 @@
 
         <section class="company-vision">
 
-            <p class="gold-label">LOOKING TO THE FUTURE</p>
+            <p class="gold-label">
+                LOOKING TO THE FUTURE
+            </p>
 
             <h2>Our Vision</h2>
 
@@ -264,7 +310,9 @@
 
             <div class="footer-column">
 
-                <h3>WHEELS ON <span>FIRE</span></h3>
+                <h3>
+                    WHEELS ON <span>FIRE</span>
+                </h3>
 
                 <p class="footer-subtitle">
                     AN EXCLUSIVE AUTOMOTIVE COLLECTION
@@ -284,9 +332,11 @@
 
             <div class="footer-column">
 
-                <h4>EXPLORE</h4>
+                <h2>EXPLORE</h2>
 
-                <a href="index.html">Home</a>
+                <a href="index.html">
+                    Home
+                </a>
 
                 <a href="index.html#collection">
                     Featured Cars
@@ -303,15 +353,17 @@
 
             <div class="footer-column">
 
-                <h4>COMPANY</h4>
+                <h2>COMPANY</h2>
 
-                <a href="about.html">About Us</a>
+                <a href="about.html">
+                    About Us
+                </a>
 
                 <a href="about.html#contact">
                     Contact
                 </a>
 
-                <a href="index.html">
+                <a href="index.html#collection">
                     Our Collection
                 </a>
 
@@ -322,7 +374,7 @@
 
             <div class="footer-column">
 
-                <h4>CONTACT</h4>
+                <h2>CONTACT</h2>
 
                 <p>
                     25 Merrion Square North<br>

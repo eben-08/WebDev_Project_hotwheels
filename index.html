@@ -1,30 +1,61 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Wheels on Fire | Luxury Car Collection</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- ACCESSIBILITY: SKIP NAVIGATION -->
+
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+
     <!-- NAVIGATION BAR -->
 
     <header>
-        <h1>WHEELS ON FIRE</h1>
 
-        <nav>
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="#collection">Collection</a>
-            <a href="#categories">Categories</a>
-            <a href="about.html">About</a>
+        <p class="site-logo">WHEELS ON FIRE</p>
+
+        <!-- ACCESSIBILITY: CONSISTENT NAVIGATION -->
+
+        <nav aria-label="Main navigation">
+
+            <a href="index.html" aria-current="page">
+                Home
+            </a>
+
+            <a href="#collection">
+                Collection
+            </a>
+
+            <a href="#categories">
+                Categories
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="about.html#contact">
+                Contact
+            </a>
+
         </nav>
+
     </header>
 
 
-    <main>
+    <main id="main-content">
 
         <!-- HERO SECTION -->
 
@@ -34,7 +65,9 @@
 
                 <p class="small-title">WELCOME TO</p>
 
-                <h2>WHEELS ON FIRE</h2>
+                <!-- ACCESSIBILITY: MAIN HEADING -->
+
+                <h1>WHEELS ON FIRE</h1>
 
                 <p>
                     Discover an exclusive collection of
@@ -55,7 +88,9 @@
 
         <section id="collection" class="collection">
 
-            <p class="small-title">OUR EXCLUSIVE COLLECTION</p>
+            <p class="small-title">
+                OUR EXCLUSIVE COLLECTION
+            </p>
 
             <h2>FEATURED CARS</h2>
 
@@ -64,11 +99,14 @@
                 performance and exotic vehicles.
             </p>
 
+
             <div class="cars">
 
                 <!-- FERRARI -->
 
                 <article class="car">
+
+                    <!-- ACCESSIBILITY: IMAGE ALT TEXT -->
 
                     <img
                         src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=900"
@@ -87,10 +125,12 @@
                             breathtaking design.
                         </p>
 
+                        <!-- ACCESSIBILITY: DESCRIPTIVE LINK -->
+
                         <a href="https://www.ferrari.com/en-EN/auto/sf90-stradale"
                            target="_blank"
                            rel="noopener noreferrer">
-                            DISCOVER MORE
+                            DISCOVER THE FERRARI SF90
                         </a>
 
                     </div>
@@ -119,10 +159,12 @@
                             with incredible power.
                         </p>
 
+                        <!-- ACCESSIBILITY: DESCRIPTIVE LINK -->
+
                         <a href="https://www.lamborghini.com/en-en/models/revuelto"
                            target="_blank"
                            rel="noopener noreferrer">
-                            DISCOVER MORE
+                            DISCOVER THE LAMBORGHINI REVUELTO
                         </a>
 
                     </div>
@@ -151,10 +193,12 @@
                             sophisticated luxury.
                         </p>
 
+                        <!-- ACCESSIBILITY: DESCRIPTIVE LINK -->
+
                         <a href="https://www.rolls-roycemotorcars.com/en_GB/showroom/cullinan.html"
                            target="_blank"
                            rel="noopener noreferrer">
-                            DISCOVER MORE
+                            DISCOVER THE ROLLS-ROYCE CULLINAN
                         </a>
 
                     </div>
@@ -170,7 +214,9 @@
 
         <section id="categories" class="categories">
 
-            <p class="small-title">FIND YOUR DREAM CAR</p>
+            <p class="small-title">
+                FIND YOUR DREAM CAR
+            </p>
 
             <h2>EXPLORE BY TYPE</h2>
 
@@ -179,7 +225,10 @@
                 extraordinary vehicles.
             </p>
 
+
             <div class="category-list">
+
+                <!-- SUPERCARS -->
 
                 <a href="https://www.ferrari.com/en-EN/auto"
                    class="category"
@@ -187,9 +236,13 @@
                    rel="noopener noreferrer">
 
                     <h3>SUPERCARS</h3>
+
                     <p>Performance and speed</p>
 
                 </a>
+
+
+                <!-- HYPERCARS -->
 
                 <a href="https://www.bugatti.com/"
                    class="category"
@@ -197,9 +250,13 @@
                    rel="noopener noreferrer">
 
                     <h3>HYPERCARS</h3>
+
                     <p>Extraordinary engineering</p>
 
                 </a>
+
+
+                <!-- LUXURY CARS -->
 
                 <a href="https://www.rolls-roycemotorcars.com/"
                    class="category"
@@ -207,9 +264,13 @@
                    rel="noopener noreferrer">
 
                     <h3>LUXURY CARS</h3>
+
                     <p>Elegance and comfort</p>
 
                 </a>
+
+
+                <!-- CLASSIC CARS -->
 
                 <a href="https://www.classicdriver.com/en/cars"
                    class="category"
@@ -217,6 +278,7 @@
                    rel="noopener noreferrer">
 
                     <h3>CLASSIC CARS</h3>
+
                     <p>Timeless automotive icons</p>
 
                 </a>
@@ -257,13 +319,22 @@
 
         <h2>WHEELS ON FIRE</h2>
 
-        <p>Driven by passion. Defined by excellence.</p>
+        <p>
+            Driven by passion. Defined by excellence.
+        </p>
 
         <div class="footer-links">
+
             <a href="index.html">Home</a>
+
             <a href="#collection">Collection</a>
+
             <a href="#categories">Categories</a>
+
             <a href="about.html">About</a>
+
+            <a href="about.html#contact">Contact</a>
+
         </div>
 
         <p class="copyright">
